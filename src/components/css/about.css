@@ -1,0 +1,269 @@
+.about {
+  min-height: 100vh;
+  padding: 8rem 2rem;
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bio {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.education {
+  margin: 2rem 0;
+}
+
+.education h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.edu-card {
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border-left: 4px solid var(--accent-primary);
+}
+
+.edu-card h4 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.edu-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.interests {
+  margin: 2rem 0;
+}
+
+.interests h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.interest-grid span {
+  background: var(--bg-secondary);
+  padding: 0.8rem;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--text-secondary);
+  border: 1px solid rgba(78, 205, 196, 0.1);
+  transition: all 0.3s ease;
+}
+
+.interest-grid span:hover {
+  border-color: var(--accent-primary);
+  transform: translateY(-3px);
+}
+
+.skills-container {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.skills-container h3 {
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.skill-item {
+  padding: 1.5rem;
+  background: var(--bg-primary);
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+}
+
+.skill-icon {
+  font-size: 2rem;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+}
+
+.skill-item h4 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: var(--bg-secondary);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(45deg, var(--accent-secondary), var(--accent-primary));
+  border-radius: 3px;
+  animation: progress 1.5s ease-out forwards;
+  position: relative;
+}
+
+.progress::after {
+  content: attr(data-level);
+  position: absolute;
+  right: 0;
+  top: -25px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+@keyframes progress {
+  from { width: 0; }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .interest-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Add to existing CSS */
+.backend-title {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}.about {
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  background: var(--bg-primary);
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 3rem;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.bio {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.education, .interests {
+  margin: 1.5rem 0;
+}
+
+.edu-card {
+  padding: 1.2rem;
+}
+
+.edu-card h4 {
+  font-size: 1.1rem;
+}
+
+.skills-container {
+  padding: 1.5rem;
+}
+
+.skills-container h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.skills-grid {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.skill-item {
+  padding: 1rem;
+}
+
+.skill-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.skill-item h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.backend-title {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 1rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
