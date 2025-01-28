@@ -24,7 +24,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-brand">
         <a href="/" className="logo-text">
-          <span className="gradient-text">PORTFOLIO</span>
+        <span className="gradient-text">&lt;MS/&gt;</span>
         </a>
       </div>
       

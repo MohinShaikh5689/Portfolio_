@@ -1,8 +1,24 @@
 import React from 'react';
 import './css/home.css';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const Home = () => {
+  const handleDownloadCV = () => {
+    const cvPath = 'assets/My_Cv.pdf';
+    
+    try {
+      const link = document.createElement('a');
+      link.href = cvPath;
+      link.download = 'Mohin_Shaikh_Resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Error downloading CV:', error);
+      alert('Error downloading CV. Please try again later.');
+    }
+  };
+
   return (
     <section id="home" className="home">
       <div className="home-content">
@@ -15,16 +31,18 @@ const Home = () => {
           </p>
           
           <div className="cta-container">
-            <button className="cta-button">Download CV</button>
+            <button className="cta-button" onClick={handleDownloadCV}>
+              Download CV
+            </button>
             <div className="social-links">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/MohinShaikh5689" target="_blank" rel="noopener noreferrer">
                 <FaGithub />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/mohin-shaikh-26a75b285/" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <FaTwitter />
+              <a href="https://www.instagram.com/mohinshaikh5689/" target="_blank" rel="noopener noreferrer">
+                <FaInstagram />
               </a>
             </div>
           </div>

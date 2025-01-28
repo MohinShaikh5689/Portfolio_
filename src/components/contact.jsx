@@ -1,94 +1,56 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import './css/contact.css';
 
 const Contact = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: ''
-    });
+    const contactInfo = [
+        {
+            icon: <FaEnvelope />,
+            title: 'Email',
+            value: 'ms9799630@gmail.com',
+            link: 'mailto:ms9799630@gmail.com'
+        },
+        {
+            icon: <FaWhatsapp />,
+            title: 'WhatsApp',
+            value: '+91 7208749700',
+            link: 'https://wa.me/917208749700'
+        },
+        {
+            icon: <FaGithub />,
+            title: 'GitHub',
+            value: 'MohinShaikh5689',
+            link: 'https://github.com/MohinShaikh5689'
+        },
+        {
+            icon: <FaLinkedin />,
+            title: 'LinkedIn',
+            value: 'Mohin Shaikh',
+            link: 'https://www.linkedin.com/in/mohin-shaikh-26a75b285/'
+        }
+    ];
 
     return (
         <section id="contact" className="contact">
             <div className="contact-header">
                 <h2 className="section-title">Get In Touch</h2>
-                <p className="section-subtitle">Let's create something together</p>
+                <p className="section-subtitle">Let's connect and collaborate</p>
             </div>
 
-            <div className="contact-wrapper">
-                <div className="contact-info">
-                    <h3>Contact Information</h3>
-                    <div className="info-item">
-                        <FaEnvelope />
-                        <span>ms9799630@gmail.com</span>
-                    </div>
-                    <div className="info-item">
-                        <FaWhatsapp />
-                        <span>+91 72087749700</span>
-                    </div>
-                    <div className="social-links">
-                        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-                            <FaGithub />
-                        </a>
-                        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
-                            <FaLinkedin />
-                        </a>
-                    </div>
-                </div>
-
-                <form className="contact-form" onSubmit={(e) => {
-                    e.preventDefault();
-                    console.log(formData);
-                }}>
-                    <div className="form-group">
-                        <label htmlFor="name">Name</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            value={formData.name}
-                            onChange={(e) => setFormData({
-                                ...formData,
-                                [e.target.name]: e.target.value
-                            })}
-                            required
-                        />
-                    </div>
-
-                    <div className="form-group">
-                        <label htmlFor="email">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={(e) => setFormData({
-                                ...formData,
-                                [e.target.name]: e.target.value
-                            })}
-                            required
-                        />
-                    </div>
-
-                    <div className="form-group">
-                        <label htmlFor="message">Message</label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            value={formData.message}
-                            onChange={(e) => setFormData({
-                                ...formData,
-                                [e.target.name]: e.target.value
-                            })}
-                            required
-                        ></textarea>
-                    </div>
-
-                    <button type="submit" className="submit-btn">
-                        Send Message
-                    </button>
-                </form>
+            <div className="contact-cards">
+                {contactInfo.map((info, index) => (
+                    <a 
+                        href={info.link} 
+                        className="contact-card" 
+                        key={index}
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
+                        <div className="card-icon">{info.icon}</div>
+                        <h3>{info.title}</h3>
+                        <p>{info.value}</p>
+                    </a>
+                ))}
             </div>
         </section>
     );

@@ -5,28 +5,25 @@ import './css/project.css';
 const Projects = () => {
     const projects = [
         {
-            title: "E-Commerce Website",
-            description: "A full-stack e-commerce platform built with React and Node.js",
-            image: "/project1.png",
-            tech: ["React", "Node.js", "MongoDB", "Express"],
-            github: "https://github.com/yourusername/project1",
-            demo: "https://project1.demo.com",
+            title: "Tour selling Website",
+            description: "A full-stack Tour platform built with Node.js and pug",
+            image: "assets/image copy 2.png",
+            tech: ["Pug", "Node.js", "MongoDB", "Express"],
+            github: "https://github.com/MohinShaikh5689/Tour_site",
         },
         {
-            title: "Weather Dashboard",
-            description: "Real-time weather application using OpenWeather API",
-            image: "/project2.png",
-            tech: ["React", "API", "CSS"],
-            github: "https://github.com/yourusername/project2",
-            demo: "https://project2.demo.com",
+            title: "Real Time Chat Application",
+            description: "Real-time Chat application using Web Sockets",
+            image: "assets/image copy.png",
+            tech: ["React", "Node.js", "Socket.io", "Express", "MongoDB"],
+            github: "https://github.com/MohinShaikh5689/Chat_App",
         },
         {
             title: "Task Manager",
-            description: "A CRUD application for managing daily tasks",
-            image: "/project3.png",
-            tech: ["React", "Firebase", "Material-UI"],
-            github: "https://github.com/yourusername/project3",
-            demo: "https://project3.demo.com",
+            description: "A CRUD application for managing daily tasks and team projects",
+            image: "assets/image.png",
+            tech: ["React", "Prisma", "PostgreSQL", "Node.js", "Express"],
+            github: "https://github.com/MohinShaikh5689/TaskMate",
         },
     ];
 
@@ -45,9 +42,6 @@ const Projects = () => {
                                     <div className="project-links">
                                         <a href={project.github} target="_blank" rel="noopener noreferrer">
                                             <FaGithub />
-                                        </a>
-                                        <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                                            <FaExternalLinkAlt />
                                         </a>
                                     </div>
                                 </div>
