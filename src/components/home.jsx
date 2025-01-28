@@ -32,7 +32,7 @@ const Home = () => {
         
         <div className="home-image">
           <div className="image-wrapper">
-            <img src="public/assets/WhatsApp Image 2025-01-26 at 21.41.40_452bae73.jpg" alt="Profile" />
+            <img src="assets/WhatsApp Image 2025-01-26 at 21.41.40_452bae73.jpg" alt="Profile" />
           </div>
         </div>
       </div>
