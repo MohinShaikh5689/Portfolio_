@@ -5,18 +5,27 @@ import './css/project.css';
 const Projects = () => {
     const projects = [
         {
+            title: "Yonko Hub",
+            description: "Yonko Hub is a full-stack anime streaming platform featuring real-time chat, private communities, watchlists, and per-episode comments — all powered by Express, PostgreSQL, and Next.js. It scrapes streaming sources like Zoro.to via proxy servers and uses Anilist for metadata, wrapped in a microservices architecture. Built with JWT auth, a custom admin panel, and seamless UI, it's like Crunchyroll if it had a brain and a backend.",
+            image: "public/assets/image copy 3.png",
+            tech: ["Next.Js", "Node.js", "Postgresql", "Express", "Prisma", "Redis", "WebSockets", "WebScraping"],
+            github: "https://github.com/MohinShaikh5689/yonko_hub",
+            live: "https://yonkohub.vercel.app",
+        },
+        {
+            title: "Spend Sensei",
+            description: "Spend Sensei is a full-stack expense tracker that helps users manage their finances. Built with React, Node.js, and MongoDB, it features user authentication, expense tracking, and data visualization.",
+            image: "public/assets/image copy 4.png",
+            tech: ["React", "Node.js", "MongoDB", "Express"],
+            github: "https://github.com/MohinShaikh5689/Spend_sensei_frontend",
+            live: "https://spend-sensei-frontend.vercel.app/",
+        },
+        {
             title: "Tour selling Website",
             description: "A full-stack Tour platform built with Node.js and pug",
             image: "assets/image copy 2.png",
             tech: ["Pug", "Node.js", "MongoDB", "Express"],
             github: "https://github.com/MohinShaikh5689/Tour_site",
-        },
-        {
-            title: "Real Time Chat Application",
-            description: "Real-time Chat application using Web Sockets",
-            image: "assets/image copy.png",
-            tech: ["React", "Node.js", "Socket.io", "Express", "MongoDB"],
-            github: "https://github.com/MohinShaikh5689/Chat_App",
         },
         {
             title: "Task Manager",
@@ -40,9 +49,14 @@ const Projects = () => {
                                 <img src={project.image} alt={project.title} />
                                 <div className="project-overlay">
                                     <div className="project-links">
-                                        <a href={project.github} target="_blank" rel="noopener noreferrer">
+                                        <a href={project.github} target="_blank" rel="noopener noreferrer" title="View Code">
                                             <FaGithub />
                                         </a>
+                                        {project.live && (
+                                            <a href={project.live} target="_blank" rel="noopener noreferrer" title="Visit Site">
+                                                <FaExternalLinkAlt />
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
                             </div>
@@ -56,6 +70,14 @@ const Projects = () => {
                                         </span>
                                     ))}
                                 </div>
+                                
+                                {project.live && (
+                                    <div className="project-live-link">
+                                        <a href={project.live} target="_blank" rel="noopener noreferrer">
+                                            <FaExternalLinkAlt /> Visit Site
+                                        </a>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     ))}
