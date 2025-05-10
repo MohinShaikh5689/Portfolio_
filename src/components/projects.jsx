@@ -7,7 +7,7 @@ const Projects = () => {
         {
             title: "Yonko Hub",
             description: "Yonko Hub is a full-stack anime streaming platform featuring real-time chat, private communities, watchlists, and per-episode comments — all powered by Express, PostgreSQL, and Next.js. It scrapes streaming sources like Zoro.to via proxy servers and uses Anilist for metadata, wrapped in a microservices architecture. Built with JWT auth, a custom admin panel, and seamless UI, it's like Crunchyroll if it had a brain and a backend.",
-            image: "public/assets/image copy 3.png",
+            image: "assets/image copy 3.png",
             tech: ["Next.Js", "Node.js", "Postgresql", "Express", "Prisma", "Redis", "WebSockets", "WebScraping"],
             github: "https://github.com/MohinShaikh5689/yonko_hub",
             live: "https://yonkohub.vercel.app",
@@ -15,7 +15,7 @@ const Projects = () => {
         {
             title: "Spend Sensei",
             description: "Spend Sensei is a full-stack expense tracker that helps users manage their finances. Built with React, Node.js, and MongoDB, it features user authentication, expense tracking, and data visualization.",
-            image: "public/assets/image copy 4.png",
+            image: "assets/image copy 4.png",
             tech: ["React", "Node.js", "MongoDB", "Express"],
             github: "https://github.com/MohinShaikh5689/Spend_sensei_frontend",
             live: "https://spend-sensei-frontend.vercel.app/",
