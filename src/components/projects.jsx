@@ -34,6 +34,14 @@ const Projects = () => {
             tech: ["React", "Prisma", "PostgreSQL", "Node.js", "Express"],
             github: "https://github.com/MohinShaikh5689/TaskMate",
         },
+        {
+            title: "CollegeTips.in's Gallery",
+            description: "A gallery website for CollegeTips.in, showcasing images and information about the company",
+            image: "assets/image copy 5.png",
+            tech: ["React", "Node.js"],
+            github: "https://github.com/MohinShaikh5689/collegeTips_gallary_repo",
+            live: "https://college-tips-gallary-repo.vercel.app/",
+        }
     ];
 
     return (
